@@ -6,16 +6,16 @@ In this simple RPG game, the hero fights the goblin. He has the options to:
 3. flee
 
 """
-from hero import Hero
-from goblin import Goblin
 
 def main():
-    goblin = Goblin()
-    hero = Hero()
+    hero_health = 10
+    hero_power = 5
+    goblin_health = 6
+    goblin_power = 2
 
-    while goblin.health > 0 and hero.health > 0:
-        print("You have %d health and %d power." % (hero.health, hero.power))
-        print("The goblin has %d health and %d power." % (goblin.health, goblin.power))
+    while goblin_health > 0 and hero_health > 0:
+        print("You have %d health and %d power." % (hero_health, hero_power))
+        print("The goblin has %d health and %d power." % (goblin_health, goblin_power))
         print()
         print("What do you want to do?")
         print("1. fight goblin")
@@ -25,9 +25,9 @@ def main():
         response = input()
         if response == "1":
             # Hero attacks goblin
-            goblin.health -= hero.power
-            print("You do %d damage to the goblin." % hero.power)
-            if goblin.health <= 0:
+            goblin_health -= hero_power
+            print("You do %d damage to the goblin." % hero_power)
+            if goblin_health <= 0:
                 print("The goblin is dead.")
         elif response == "2":
             pass
@@ -35,13 +35,13 @@ def main():
             print("Goodbye.")
             break
         else:
-            print("Invalid input %r" % input)
+            print("Invalid input %r" % response)
 
-        if goblin.health > 0:
+        if goblin_health > 0:
             # Goblin attacks hero
-            hero.health -= goblin.power
-            print("The goblin does %d damage to you." % goblin.power)
-            if hero.health <= 0:
+            hero_health -= goblin_power
+            print("The goblin does %d damage to you." % goblin_power)
+            if hero_health <= 0:
                 print("You are dead.")
 
 main()
