@@ -4,10 +4,8 @@ from .character import Character
 
 class Medic(Character):
     def __init__(self):
+        super().__init__()
         self.name = 'medic'
-        self.health = 10
-        self.power = 5
-        self.coins = 20
 
     def heal_damage(self, points):
         self.health += points
