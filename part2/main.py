@@ -1,9 +1,9 @@
-from characters import Hero, Wizard, Goblin
+from characters import Wizard, Goblin, Shadow
 from battle import Battle
 from store import Store
 
 
-hero = Hero()
+hero = Shadow()
 enemies = [Goblin(), Wizard()]
 battle_engine = Battle()
 shopping_engine = Store()

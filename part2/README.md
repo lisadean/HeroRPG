@@ -1,4 +1,4 @@
-TODO: I'm on the medic under characters
+TODO: I'm on the zombie under characters
 
 # RPG Game
 You will base your game on version 5 of the game and make mods to the game.

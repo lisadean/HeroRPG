@@ -4,7 +4,7 @@ import time
 class Battle(object):
     def do_battle(self, hero, enemy):
         print("=====================")
-        print("Hero faces the %s" % enemy.name)
+        print("%s faces the %s" % (hero.name.capitalize(), enemy.name))
         print("=====================")
         while hero.alive() and enemy.alive():
             hero.print_status()
