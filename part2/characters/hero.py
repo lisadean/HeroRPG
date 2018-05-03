@@ -7,9 +7,6 @@ class Hero(Character):
     def __init__(self):
         super().__init__()
         self.name = 'hero'
-        # self.health = 10
-        # self.power = 5
-        # self.coins = 20
 
     def restore(self):
         self.health = 10
